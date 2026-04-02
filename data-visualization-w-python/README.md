@@ -1,0 +1,103 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "1bdff523-2f40-4a51-b793-216268a4a05c",
+   "metadata": {},
+   "source": [
+    "# Air Quality Data Visualization\n",
+    "\n",
+    "## About\n",
+    "\n",
+    "This project visualizes the **Air Quality dataset** from the UCI Machine Learning Repository. The dataset contains 9,358 instances of hourly averaged sensor readings from a gas multisensor device deployed in an Italian city, recorded from March 2004 to February 2005.\n",
+    "\n",
+    "**Dataset source:** [UCI Machine Learning Repository – Air Quality (ID: 360)](https://archive.ics.uci.edu/dataset/360/air+quality)\n",
+    "\n",
+    "## Folder Structure\n",
+    "\n",
+    "```\n",
+    "data-visualization-w-python/\n",
+    "├── air-quality-analysis.ipynb   # Main Jupyter notebook with all code and outputs\n",
+    "├── images/                      # Exported plot images\n",
+    "│   ├── line_plot_co.png\n",
+    "│   ├── histogram_temperature.png\n",
+    "│   ├── heatmap_correlation.png\n",
+    "│   └── scatter_temp_humidity.png\n",
+    "└── README.md\n",
+    "```\n",
+    "\n",
+    "## Dataset Overview\n",
+    "\n",
+    "The dataset includes hourly readings from 5 metal oxide chemical sensors along with reference measurements from a certified analyzer. Key variables include:\n",
+    "\n",
+    "- **CO(GT)** – Carbon monoxide concentration (mg/m³)\n",
+    "- **C6H6(GT)** – Benzene concentration (µg/m³)\n",
+    "- **NOx(GT)** – Nitrogen oxides concentration (ppb)\n",
+    "- **NO2(GT)** – Nitrogen dioxide concentration (µg/m³)\n",
+    "- **PT08.S1–S5** – Sensor responses targeting CO, NMHC, NOx, NO2, and O3\n",
+    "- **T, RH, AH** – Temperature (°C), relative humidity (%), and absolute humidity\n",
+    "\n",
+    "Missing values in the dataset are encoded as `-200`.\n",
+    "\n",
+    "## Visualizations\n",
+    "\n",
+    "Four visualizations were created to explore different aspects of the data:\n",
+    "\n",
+    "1. **Line Plot** – Hourly CO concentration over time (first 500 hours), showing daily fluctuation patterns in carbon monoxide levels.\n",
+    "2. **Histogram** – Distribution of temperature readings across the full year, revealing a roughly normal distribution centered around 10–20°C.\n",
+    "3. **Correlation Heatmap** – Pairwise correlations between all numeric features, highlighting strong relationships between pollutants and sensor responses.\n",
+    "4. **Scatter Plot** – Temperature vs. relative humidity, showing a clear negative relationship (higher temperatures correspond to lower humidity).\n",
+    "\n",
+    "## Requirements\n",
+    "\n",
+    "- Python 3.10+\n",
+    "- pandas\n",
+    "- numpy\n",
+    "- matplotlib\n",
+    "- seaborn\n",
+    "- ucimlrepo\n",
+    "\n",
+    "Install dependencies:\n",
+    "\n",
+    "```bash\n",
+    "pip install pandas numpy matplotlib seaborn ucimlrepo\n",
+    "```\n",
+    "\n",
+    "## How to Run\n",
+    "\n",
+    "1. Open `air-quality-analysis.ipynb` in Jupyter Notebook or JupyterLab.\n",
+    "2. Run all cells in order (the first cell installs `ucimlrepo` if needed).\n",
+    "3. Plots will display inline. Save them to `images/` if needed using `plt.savefig()`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2a370e36-98dc-4edb-8807-7cfbf6efd8e6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
